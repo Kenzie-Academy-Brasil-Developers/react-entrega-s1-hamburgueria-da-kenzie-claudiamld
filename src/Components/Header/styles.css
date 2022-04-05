@@ -1,0 +1,66 @@
+.box-header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: #F5F5F5;
+    padding-bottom: 1.5rem;
+}
+.input-box{
+    display: flex;
+    border: 2px solid #E0E0E0;
+    padding: 0.5rem 0rem;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+.logo-burger{
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    color: #333333;
+    width: 100vw;
+    text-align: center;
+}
+.logo-kenzie{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #EB5757;
+    text-align: center;
+}
+.input-header{
+    font-family: 'Inter', sans-serif;
+    color: #E0E0E0;
+    border: none;
+    border-radius: 8px;
+    width: 60%;
+    padding-left: 15px;
+}
+.input-header:focus{
+    outline: none;
+    border: none;
+}
+.btn-header{
+    border: none;
+    background-color: #27AE60;
+    margin-right: 10px;
+    color: #FFFFFF;
+    border-radius: 8px;
+    height: 2rem;
+    width: 5.5rem;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1024px){
+    .box-header{
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+        padding: 0.3rem 0rem;
+    }
+    .logo-burger{
+        max-width: 20vw;
+    }
+    .input-box{
+        margin-right: 3rem;
+    }
+}
