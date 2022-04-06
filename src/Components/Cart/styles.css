@@ -29,10 +29,17 @@
 .div-total{
     display: flex;
     width: 90%;
+    justify-content: space-between;
+    align-items: center;
 }
 .total-cart{
     color: #333333;
     font-size: 14px;
+}
+.total-value{
+    font-size: 14px;
+    font-weight: bold;
+    color: #828282;
 }
 .btn-removerTodos{
     width: 90%;
