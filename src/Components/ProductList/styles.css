@@ -1,0 +1,16 @@
+.products-box{
+    display: flex;
+    overflow: scroll;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+}
+
+@media screen and (min-width: 1024px){
+    .products-box{
+        flex-wrap: wrap;
+        max-width: 65vw;
+        overflow: visible;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
