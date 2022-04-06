@@ -2,6 +2,7 @@ import './styles.css'
 
 export const Cart = ({product}) => {
     return(
+        
         <div className="cart-box">
             <div className="title-cart--div">
                 <h1 className="title-cart">Carrinho de compras</h1>

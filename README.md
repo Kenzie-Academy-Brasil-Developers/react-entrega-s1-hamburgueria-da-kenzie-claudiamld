@@ -9,3 +9,8 @@ FUNCIONALIDADES
 4. Remover cada produto individualmente do carrinho
 5. Remover todos os produtos do carrinho
 6. Filtrar os produtos através do input
+
+ANDAMENTO DO PROJETO
+- ProductCard determina as propriedades que serão contidas no card de cada produto e botão de adicionar produto ao carrinho
+- ProductList faz um map pela lista de produtos e atribui valores às propriedades adicionadas ao meu card pelo componente ProductCard
+- 

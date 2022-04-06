@@ -7,6 +7,12 @@ import { Cart } from './Components/Cart/Cart';
 function App() {
 
   const [products, setProducts] = useState([])
+  const [currentSale, setCurrentSale] = useState([])
+
+  const handleAddToCart = (value) => {
+    const newArr = [...currentSale, value]
+    setCurrentSale(newArr)
+  }
 
   useEffect(() => {
     fetch("https://hamburgueria-kenzie-json-serve.herokuapp.com/products")
@@ -15,14 +21,15 @@ function App() {
       .catch((err) => console.log(err))
   }, [])
 
-  console.log(products);
-
+  useEffect(() => {
+    console.log(currentSale);
+  }, [currentSale])
 
   return (
     <div>
       <Header />
       <div className='main'>
-        <ProductList products={products} />
+        <ProductList products={products} handleAddToCart={handleAddToCart} />
         <Cart />
       </div>
     </div>
