@@ -14,6 +14,15 @@ function App() {
     setCurrentSale(newArr)
   }
 
+  const handleRemoveToCart = (value) => {
+    const newArr = currentSale.filter(product => product !== value)
+    setCurrentSale(newArr)
+  }
+
+  const handleRemoveAll = (value) => {
+    setCurrentSale([])
+  }
+
   useEffect(() => {
     fetch("https://hamburgueria-kenzie-json-serve.herokuapp.com/products")
       .then((response) => response.json())
@@ -30,7 +39,7 @@ function App() {
       <Header />
       <div className='main'>
         <ProductList products={products} handleAddToCart={handleAddToCart} />
-        <Cart currentSale={currentSale} />
+        <Cart currentSale={currentSale} handleRemoveToCart={handleRemoveToCart} handleRemoveAll={handleRemoveAll} />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { CartProduct } from '../CartProduct/CartProduct'
 import './styles.css'
 
-export const Cart = ({currentSale}) => {
+export const Cart = ({currentSale, handleRemoveToCart, handleRemoveAll}) => {
     return(
         
         <div className="cart-box">
@@ -12,7 +12,7 @@ export const Cart = ({currentSale}) => {
                 {currentSale.map(productCart => (
                     <CartProduct 
                     productCart={productCart}
-                    // handleRemoveToCart={handleRemoveToCart}
+                    handleRemoveToCart={handleRemoveToCart}
                     key={productCart.id}
                     />
                 ))}
@@ -21,7 +21,7 @@ export const Cart = ({currentSale}) => {
                 <h2 className="total-cart">Total:</h2>
                 <span className="total-value"></span>
             </div>
-            <button className="btn-removerTodos">Remover todos</button>
+            <button className="btn-removerTodos" onClick={handleRemoveAll}>Remover todos</button>
         </div>
     )
 }

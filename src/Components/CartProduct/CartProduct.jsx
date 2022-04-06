@@ -1,6 +1,6 @@
 import './styles.css'
 
-export const CartProduct = ({productCart}) => {
+export const CartProduct = ({productCart, handleRemoveToCart}) => {
     return(
         <div className="cartProduct-box">
             <div className="div-image--cart">
@@ -10,7 +10,7 @@ export const CartProduct = ({productCart}) => {
                 <h2 className="title-cartProduct">{productCart.name}</h2>
                 <span className='category-cart'>{productCart.category}</span>
             </div>
-            <button className="btn-CartProduct--remover">Remover</button>
+            <button className="btn-CartProduct--remover" onClick={() => handleRemoveToCart(productCart)}>Remover</button>
         </div>
     )
 }

@@ -56,4 +56,8 @@
     .category-cart{
         margin-top: 0.5rem;
     }
+    .btn-CartProduct--remover:hover{
+        color: #828282;
+        cursor: pointer;
+    }
 }
