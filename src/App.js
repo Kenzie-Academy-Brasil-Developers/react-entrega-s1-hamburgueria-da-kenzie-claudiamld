@@ -30,7 +30,7 @@ function App() {
       <Header />
       <div className='main'>
         <ProductList products={products} handleAddToCart={handleAddToCart} />
-        <Cart />
+        <Cart currentSale={currentSale} />
       </div>
     </div>
   );

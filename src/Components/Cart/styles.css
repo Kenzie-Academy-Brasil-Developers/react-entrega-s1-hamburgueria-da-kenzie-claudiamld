@@ -23,6 +23,8 @@
 }
 .cart-content{
     border-bottom: 1px solid #E0E0E0;
+    width: 90%;
+    overflow: scroll;
 }
 .div-total{
     display: flex;
@@ -50,7 +52,7 @@
         max-height: 20rem;
         margin-top: 2rem;
         margin-bottom: 0rem;
-        padding-bottom: 0rem;
+        padding-bottom: 1rem;
     }
     .btn-removerTodos:hover{
         background-color: #828282;

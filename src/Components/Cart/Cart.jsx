@@ -1,6 +1,7 @@
+import { CartProduct } from '../CartProduct/CartProduct'
 import './styles.css'
 
-export const Cart = ({product}) => {
+export const Cart = ({currentSale}) => {
     return(
         
         <div className="cart-box">
@@ -8,7 +9,13 @@ export const Cart = ({product}) => {
                 <h1 className="title-cart">Carrinho de compras</h1>
             </div>
             <div className="cart-content">
-
+                {currentSale.map(productCart => (
+                    <CartProduct 
+                    productCart={productCart}
+                    // handleRemoveToCart={handleRemoveToCart}
+                    key={productCart.id}
+                    />
+                ))}
             </div>
             <div className="div-total">
                 <h2 className="total-cart">Total:</h2>
