@@ -12,13 +12,13 @@ export const Cart = ({currentSale, handleRemoveToCart, handleRemoveAll, cartTota
             {
                 currentSale.length < 1 
                 ? (
-                    <div>
-                        <h3>Sua sacola está vazia</h3>
-                        <span>Adicionar itens</span>
+                    <div className='emptyCart'>
+                        <h3 className='emptyCart-title'>Sua sacola está vazia</h3>
+                        <span className='emptyCart-span'>Adicionar itens</span>
                     </div>
                 ) : (
-                    <div>
-                        <div className="cart-content">
+                    <div className='cart-content'>
+                        <div className="cartPrincipal-content">
                         {currentSale.map(productCart => (
                             <CartProduct 
                             productCart={productCart}
