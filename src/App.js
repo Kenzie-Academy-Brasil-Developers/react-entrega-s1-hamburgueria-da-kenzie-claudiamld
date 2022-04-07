@@ -42,6 +42,7 @@ function App() {
     calculateTotal()
   }, [currentSale])
 
+
   return (
     <div>
       <Header 
