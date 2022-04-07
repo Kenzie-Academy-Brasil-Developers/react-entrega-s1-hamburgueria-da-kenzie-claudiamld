@@ -11,8 +11,9 @@ function App() {
   const [cartTotal, setCartTotal] = useState(0)
 
   const handleAddToCart = (value) => {
+    const isUnique = currentSale.find(product => product === value)
     const newArr = [...currentSale, value]
-    setCurrentSale(newArr)
+    isUnique ? setCurrentSale(currentSale) : setCurrentSale(newArr)
   }
 
   const handleRemoveToCart = (value) => {
