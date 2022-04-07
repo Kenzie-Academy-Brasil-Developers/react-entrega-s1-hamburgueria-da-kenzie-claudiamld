@@ -9,6 +9,7 @@
     .products-box{
         flex-wrap: wrap;
         max-width: 65vw;
+        min-width: 65vw;
         overflow: visible;
         justify-content: center;
         margin-top: 2rem;

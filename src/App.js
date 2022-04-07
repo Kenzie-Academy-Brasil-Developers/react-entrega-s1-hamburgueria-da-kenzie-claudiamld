@@ -7,6 +7,7 @@ import { Cart } from './Components/Cart/Cart';
 function App() {
 
   const [products, setProducts] = useState([])
+  const [filteredProduct, setFilteredProducts] = useState([])
   const [currentSale, setCurrentSale] = useState([])
   const [cartTotal, setCartTotal] = useState(0)
 
@@ -48,7 +49,9 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header 
+        products={products} setProducts={setProducts} filteredProduct={filteredProduct} setFilteredProducts={setFilteredProducts}
+      />
       <div className='main'>
         <ProductList products={products} handleAddToCart={handleAddToCart} />
         <Cart 
