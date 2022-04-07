@@ -29,7 +29,7 @@
 }
 .input-header{
     font-family: 'Inter', sans-serif;
-    color: #E0E0E0;
+    color: #828282;
     border: none;
     border-radius: 8px;
     width: 60%;
@@ -61,6 +61,6 @@
         max-width: 20vw;
     }
     .input-box{
-        margin-right: 3rem;
+        margin-right: 4rem;
     }
 }

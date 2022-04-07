@@ -26,6 +26,8 @@
     font-size: 16px;
     margin-bottom: 0;
     margin-top: 0;
+    text-overflow: ellipsis;
+    max-width: 5rem;
 }
 .category-cart{
     color: #828282;
@@ -49,9 +51,6 @@
     }
     ::-webkit-scrollbar{
         display: none;   
-    }
-    .div-titletype--cart{
-        margin-left: -8rem;
     }
     .category-cart{
         margin-top: 0.5rem;
