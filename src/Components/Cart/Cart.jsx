@@ -17,23 +17,26 @@ export const Cart = ({currentSale, handleRemoveToCart, handleRemoveAll, cartTota
                         <span>Adicionar itens</span>
                     </div>
                 ) : (
-                    <div className="cart-content">
-                    {currentSale.map(productCart => (
-                        <CartProduct 
-                        productCart={productCart}
-                        handleRemoveToCart={handleRemoveToCart}
-                        key={productCart.id}
-                        />
-                    ))}
-                </div>
+                    <div>
+                        <div className="cart-content">
+                        {currentSale.map(productCart => (
+                            <CartProduct 
+                            productCart={productCart}
+                            handleRemoveToCart={handleRemoveToCart}
+                            key={productCart.id}
+                            />
+                        ))}
+                        </div>
+                        <div className="div-total">
+                            <h2 className="total-cart">Total:</h2>
+                            <span className="total-value">R${cartTotal}</span>
+                        </div>
+                        <button className="btn-removerTodos" onClick={handleRemoveAll}>Remover todos</button>
+                    </div>
                 )
             }
            
-            <div className="div-total">
-                <h2 className="total-cart">Total:</h2>
-                <span className="total-value">R${cartTotal}</span>
-            </div>
-            <button className="btn-removerTodos" onClick={handleRemoveAll}>Remover todos</button>
+            
         </div>
     )
 }

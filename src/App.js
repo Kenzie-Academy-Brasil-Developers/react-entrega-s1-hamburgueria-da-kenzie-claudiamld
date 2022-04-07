@@ -28,7 +28,7 @@ function App() {
 
   const calculateTotal = () => {
     const totalPrice = currentSale.reduce((acc, currValue) => currValue.price + acc, 0)
-    setCartTotal(totalPrice)
+    setCartTotal(totalPrice.toFixed(2))
   }
 
   useEffect(() => {
