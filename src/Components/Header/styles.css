@@ -63,4 +63,8 @@
     .input-box{
         margin-right: 4rem;
     }
+    .btn-header:hover{
+        cursor: pointer;
+        background-color: #93D7AF;
+    }
 }

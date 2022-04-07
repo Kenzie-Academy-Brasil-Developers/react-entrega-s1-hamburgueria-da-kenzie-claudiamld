@@ -30,7 +30,6 @@ function App() {
     const totalPrice = currentSale.reduce((acc, currValue) => currValue.price + acc, 0)
     setCartTotal(totalPrice)
   }
-  console.log(cartTotal);
 
   useEffect(() => {
     fetch("https://hamburgueria-kenzie-json-serve.herokuapp.com/products")
@@ -40,17 +39,16 @@ function App() {
   }, [])
 
   useEffect(() => {
-    console.log(currentSale);
-  }, [currentSale])
-
-  useEffect(() => {
     calculateTotal()
   }, [currentSale])
 
   return (
     <div>
       <Header 
-        products={products} setProducts={setProducts} filteredProduct={filteredProduct} setFilteredProducts={setFilteredProducts}
+        products={products} 
+        setProducts={setProducts} 
+        filteredProduct={filteredProduct} 
+        setFilteredProducts={setFilteredProducts}
       />
       <div className='main'>
         <ProductList products={products} handleAddToCart={handleAddToCart} />
