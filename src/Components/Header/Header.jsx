@@ -3,8 +3,8 @@ import './styles.css'
 const Header = ({products, setProducts, filteredProduct, setFilteredProducts}) => {
 
     const filterFromInput = () => {
-        const newArr = products.filter((product) => product.name.includes(filteredProduct) 
-        || product.category.includes(filteredProduct))
+        const newArr = products.filter((product) => product.name.toLowerCase().includes(filteredProduct) 
+        || product.category.toLowerCase().includes(filteredProduct))
         setProducts(newArr)
     }
 
